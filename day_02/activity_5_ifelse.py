@@ -10,7 +10,10 @@
 
 word = input("Type a word    >    ")
 
-if (len(word)%2 == 0) and (word[0:len/2 -1] == word[len/2:len]):
+if (len(word)%2 == 0) and (word[0:int(len(word)/2 -1)] == word[int(len(word)/2):len(word)]):
     print("True")
 else:
     print("False")
+
+    
+# print(word[0:int(len(word)/2 -1)])
