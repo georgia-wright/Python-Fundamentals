@@ -10,8 +10,12 @@
 
 #then random method to pick out of good or bad list (random index number, 0-3)
 
+# use colorama on the print of each answer
+
 import random
 import time 
+from colorama import Back, Fore, Style
+
 
 good_list = [
     "It is certain",
@@ -37,9 +41,12 @@ random_number = random.randint(1,8)
 
 if random_number == 2 or random_number == 4 or random_number == 6 or random_number == 8:
     # good_choice = random.randint(0,3)
-    print(good_list[random.randint(1,3)])
+    print(Fore.GREEN + (good_list[random.randint(1,3)]))
 else:
-    print(bad_list[random.randint(1,3)])
+    print(Fore.RED + (bad_list[random.randint(1,3)]))
+
+    
+
 
 
 
