@@ -15,8 +15,8 @@ original_number = random.randint(1,12)
 
 print(original_number)
 
+attempts = 0
 
-guess = input("Higher or Lower?   >  ").capitalize()
 
 # while guess != "Higher" or guess != "Lower":
 #     print("Please answer Higher or Lower only.")
@@ -24,19 +24,40 @@ guess = input("Higher or Lower?   >  ").capitalize()
 #     break
 
 
-new_number = random.randint(1,12)
-while new_number == original_number:
-    new_number = random.randint(1,12)
 
-print(new_number)
 
-if guess == "Higher" and new_number > original_number:
-    print("You are correct!")
+while attempts < 3:
+            
 
-elif guess == "Lower" and new_number < original_number:
-    print("You are correct!")
+            guess = input("Higher or Lower?   >  ").capitalize()
 
-else:
-    print("Unlucky.")
+            new_number = random.randint(1,12)
+            while new_number == original_number:
+                new_number = random.randint(1,12)
+
+            print(new_number)
+
+            if guess == "Higher" and new_number > original_number:
+                print("You are correct!")
+
+            elif guess == "Lower" and new_number < original_number:
+                print("You are correct!")
+
+            else:
+                print("Unlucky, try again.")
+                attempts += 1
+
+            original_number = new_number
+
+print("Game over")
+
+
+
+
+
+    
+
+
+
 
 
